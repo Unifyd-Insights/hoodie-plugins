@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Unifyd-Insights/hoodie-plugins/compare/v1.0.1...v1.0.2) (2026-09-01)
+
+
+### Bug Fixes
+
+* move description/version to top level of marketplace.json ([507ff3e](https://github.com/Unifyd-Insights/hoodie-plugins/commit/507ff3e01fb95a2b70dd42110b7c07d0b0dd507c))
+
 ## [1.0.1](https://github.com/Unifyd-Insights/hoodie-plugins/compare/v1.0.0...v1.0.1) (2026-09-01)
 
 
