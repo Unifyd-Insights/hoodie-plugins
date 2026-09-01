@@ -19,8 +19,7 @@ bump("plugins/hoodie/.claude-plugin/plugin.json", (json) => {
 });
 
 bump(".claude-plugin/marketplace.json", (json) => {
-  json.metadata = json.metadata || {};
-  json.metadata.version = version;
+  json.version = version;
   for (const plugin of json.plugins || []) {
     if (plugin.name === "hoodie") {
       plugin.version = version;

@@ -1,12 +1,10 @@
 {
   "name": "hoodie-plugins",
+  "description": "Claude Code plugin marketplace for Unifyd-Insights / Hoodie Analytics.",
+  "version": "1.0.1",
   "owner": {
     "name": "Unifyd-Insights",
     "url": "https://github.com/Unifyd-Insights"
-  },
-  "metadata": {
-    "description": "Claude Code plugin marketplace for Unifyd-Insights / Hoodie Analytics.",
-    "version": "1.0.1"
   },
   "plugins": [
     {
