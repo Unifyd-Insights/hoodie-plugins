@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hoodie": {
+      "type": "url",
+      "url": "https://mcp.hoodieanalytics.com/mcp"
+    }
+  }
+}

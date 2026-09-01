@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate marketplace.json
+        run: jq empty .claude-plugin/marketplace.json
+
+      - name: Validate hoodie plugin.json
+        run: jq empty plugins/hoodie/.claude-plugin/plugin.json
+
+      - name: Validate hoodie .mcp.json
+        run: jq empty plugins/hoodie/.mcp.json

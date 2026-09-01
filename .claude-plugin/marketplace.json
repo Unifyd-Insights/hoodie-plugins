@@ -1,0 +1,18 @@
+{
+  "name": "hoodie-plugins",
+  "owner": {
+    "name": "Unifyd-Insights",
+    "url": "https://github.com/Unifyd-Insights"
+  },
+  "metadata": {
+    "description": "Claude Code plugin marketplace for Unifyd-Insights / Hoodie Analytics.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "hoodie",
+      "source": "./plugins/hoodie",
+      "description": "Connects Claude Code to the Hoodie Analytics MCP server for cannabis retail and wholesale market intelligence."
+    }
+  ]
+}
