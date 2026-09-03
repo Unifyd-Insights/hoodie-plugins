@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/Unifyd-Insights/hoodie-plugins/compare/v1.0.2...v1.0.3) (2026-09-03)
+
+
+### Bug Fixes
+
+* update metadata ([c430192](https://github.com/Unifyd-Insights/hoodie-plugins/commit/c430192e9472f6e8cbc47cc4b20b8d46a04f4ebd))
+
 ## [1.0.2](https://github.com/Unifyd-Insights/hoodie-plugins/compare/v1.0.1...v1.0.2) (2026-09-01)
 
 
