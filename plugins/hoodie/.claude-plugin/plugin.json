@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Connects Claude Code to the Hoodie Analytics MCP server for cannabis retail and wholesale market intelligence.",
   "author": {
-    "name": "Unifyd-Insights"
+    "name": "Hoodie Analytics"
   },
   "homepage": "https://github.com/Unifyd-Insights/hoodie-plugins",
   "license": "MIT"
