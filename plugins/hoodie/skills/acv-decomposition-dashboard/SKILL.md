@@ -31,19 +31,22 @@ Ask (AskUserQuestion) for anything not already stated:
 
 ## 2. Choose the data-pull strategy
 
-This is a real trade-off and the user must pick. Don't decide silently.
+This is a real trade-off and the user must pick — but don't ask it cold. Recommend a default from the brand count already gathered in §1, explain the consequence of each option in plain language (not tool names), and let the user override.
 
-| | `marketIntelligence_acv` per brand/month | `marketIntelligence_pivotQuery` consolidated |
-|---|---|---|
-| Best for | 1–3 brands | 4+ sibling brands (portfolio rollup) |
-| Call volume | Higher — see `references/pivotquery-recipes.md` for measured numbers | Far lower — see the same reference |
-| Stock health | `AVG_DAYS_IN_STOCK_PERCENT`, `AVG_OOS_SKU_PERCENT` | **Not available.** Only `avgOutOfStockDays`, a day-count gap — not a comparable % |
+**Default recommendation:**
+- **1–3 brands** → recommend "Status quo". At this scale the simpler path is also the cheap one — there's no efficiency to gain by switching.
+- **4+ sibling brands** (portfolio rollup) → recommend "Full efficiency". The consolidated path cuts an ~23-call build to ~6 (see `references/pivotquery-recipes.md` for the measured numbers), and at that call volume the difference is worth the trade-off below.
 
-Choosing pivotQuery means the store-detail table loses its "In stock %" / "OOS %" columns and the mix-shift panel (§6) can't be built at all. Those fields must be **dropped, not approximated**. Put the choice to the user explicitly:
+**The trade-off to explain, whichever way it leans:** the efficient path can't report stock health. Its only stock-adjacent field is a day-count gap, not the "% of days in stock" / "% SKUs out of stock" figures the simple path gives you. Losing those also means the store-level mix-shift panel (§6) can't be built at all — there's no way to approximate around it, so it just won't be in the dashboard.
 
-- **Full efficiency** — pivotQuery, drop the stock-health fields.
-- **Status quo** — stay on `marketIntelligence_acv`, keep stock health, accept the call volume.
-- **Document only** — note the pattern for next time, don't rebuild.
+Ask with the recommendation stated up front, e.g.:
+
+> Since this is a single-brand build, I'd suggest keeping the simpler pull (it also gives us stock-health data for the mix-shift panel). Options:
+> 1. **Keep it simple** (recommended) — normal call volume, full stock-health data, mix-shift panel included.
+> 2. **Optimize for speed** — far fewer API calls, but no stock-health columns and no mix-shift panel.
+> 3. **Just note this for later** — don't rebuild anything right now.
+
+Only fall back to a neutral three-way ask (no recommendation) if the brand count is borderline or the user hasn't given enough signal to lean one way.
 
 ## 3. Pull the data
 
@@ -100,7 +103,7 @@ Single-file HTML. This skill carries no brand theme of its own — confirm styli
 - If the user has given a house style, palette, or logo, or a client-brand skill is available in the environment, use that.
 - Otherwise, ask the user for their preferred palette/logo, or default to a clean, neutral theme (a single accent colour, generous whitespace, plain sans-serif) — do not invent or assume any particular company's branding.
 
-If `dataviz` and/or `artifact-design` skills are also available, consult them for chart and visual-design conventions. If they're not available, fall back to: consistent axis and legend treatment across all charts, one accent colour for emphasis, and generous whitespace over dense layouts.
+If `dataviz` and/or `design` skills are also available, consult them for chart and visual-design conventions. If they're not available, fall back to: consistent axis and legend treatment across all charts, one accent colour for emphasis, and generous whitespace over dense layouts.
 
 - Make **every** supporting report/data table sortable by clicking column headers (toggle direction on repeat click), not just the primary store-detail table.
 - Pick a sensible default sort — dollars descending usually beats a rate-based metric, since scale is normally the question.
