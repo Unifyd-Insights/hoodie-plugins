@@ -8,9 +8,9 @@
   },
   "plugins": [
     {
-      "name": "hoodie",
+      "name": "hoodie-analytics",
       "source": "./plugins/hoodie",
-      "description": "Connects Claude Code to the Hoodie Analytics MCP server and skills for cannabis retail and wholesale market intelligence.",
+      "description": "Connects your AI agent to the Hoodie Analytics MCP server for cannabis retail and wholesale market intelligence, and provides skills to use with the MCP tools.",
       "version": "1.0.3"
     }
   ]
