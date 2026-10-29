@@ -13,7 +13,13 @@ A [Claude Code plugin marketplace](https://docs.claude.com/en/docs/claude-code/p
 
 ### hoodie-analytics
 
-Connects to the Hoodie Analytics MCP server (`https://mcp.hoodieanalytics.com/mcp`), giving Claude access to cannabis retail and wholesale market intelligence tools. Skills will be added here over time — the `skills/` folder currently only has one skill.
+Connects to the Hoodie Analytics MCP server (`https://mcp.hoodieanalytics.com/mcp`), giving Claude access to cannabis retail and wholesale market intelligence tools. It also ships these skills:
+
+- **`acv-decomposition-dashboard`** — two-month ACV decomposition dashboard for one or more brands in a state: won/lost stores, dollar bridge, whitespace, county map and market movers.
+- **`shelf-check`** — shelf health report for a dispensary from a POS export plus Hoodie market data: keep, fix or cut verdicts per product line, replacements and a 30-day plan. Needs Python 3 with pandas, numpy and openpyxl (for Excel exports); the email-safe PDF also needs Playwright with Chromium.
+- **`weekly-brand-reorder`** — weekly reorder grouped by brand from a POS or inventory export: purchase orders per brand and store, a Hoodie-branded page and a vendor CSV. Needs Python 3 with pandas and openpyxl, and LibreOffice to recalculate the workbook before the page is built (the skill uses the `xlsx` skill's `recalc.py`).
+
+`shelf-check` and `weekly-brand-reorder` are exact copies of the skills the Hoodie MCP gateway serves as `skill://hoodie/shelf-check` and `skill://hoodie/weekly-brand-reorder`. Change them at the gateway's source first, then copy them here unchanged.
 
 ## Hoodie MCP Server tools
 
