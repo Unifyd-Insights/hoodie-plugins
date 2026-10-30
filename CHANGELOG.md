@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/Unifyd-Insights/hoodie-plugins/compare/v1.0.3...v1.1.0) (2026-10-30)
+
+
+### Bug Fixes
+
+* improve explanation of data-pull strategy (section 2) ([eb013fc](https://github.com/Unifyd-Insights/hoodie-plugins/commit/eb013fc30f351a87d8bc5a55022ca957f3b3e398))
+* use kebab-case marketplace name ([c4967c1](https://github.com/Unifyd-Insights/hoodie-plugins/commit/c4967c12821720580320567d322fae18c7eb88b4))
+
+
+### Features
+
+* add acv-decomposition-dashboard agent skill ([7044b11](https://github.com/Unifyd-Insights/hoodie-plugins/commit/7044b110d703b6ec5f193eac85bff0251c386ca5))
+* add shelf-check and weekly-brand-reorder skills ([5b49a51](https://github.com/Unifyd-Insights/hoodie-plugins/commit/5b49a51cfa4b3a3c97a0447388cfb1bca5d716eb))
+
 ## [1.0.3](https://github.com/Unifyd-Insights/hoodie-plugins/compare/v1.0.2...v1.0.3) (2026-09-03)
 
 

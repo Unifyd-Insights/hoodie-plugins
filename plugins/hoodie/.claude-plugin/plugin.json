@@ -1,6 +1,6 @@
 {
   "name": "hoodie-analytics",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Connects your AI agent to the Hoodie Analytics MCP server for cannabis retail and wholesale market intelligence, and provides skills to use with the MCP tools.",
   "author": {
     "name": "Hoodie Analytics"
