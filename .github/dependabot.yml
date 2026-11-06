@@ -1,0 +1,37 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories:
+      - '/'
+    schedule:
+      interval: weekly
+    # Only security updates open PRs; settings such as assignees still apply to them
+    open-pull-requests-limit: 0
+    assignees:
+      - grahammcculloch
+    # Conventional PR titles (chore(deps): ...) to pass the PR title check
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - '*'
+
+  - package-ecosystem: github-actions
+    directories:
+      - '/'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    assignees:
+      - grahammcculloch
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      actions-security:
+        applies-to: security-updates
+        patterns:
+          - '*'
