@@ -26,6 +26,13 @@ You need a Hoodie Analytics account. The data you can query depends on your subs
 
 If Claude says the hoodie-analytics sign-in expired, disconnect the connector under **Customize > Connectors** and connect it again.
 
+## Example prompts
+
+- "Which brands gained the most share in Illinois flower last month?" (the connector's market intelligence tools)
+- "Build an ACV decomposition dashboard for [your brand] in Michigan, comparing last month with the month before." (acv-decomposition-dashboard)
+- Upload your POS sales export, then: "Run a shelf check on this store. What should we keep, fix or cut?" (shelf-check)
+- Upload your POS or inventory export, then: "Build this week's reorder by brand." (weekly-brand-reorder)
+
 ## What the skills need
 
 The skills run Python where Claude runs them: on your computer in Claude Code, or in the session in Cowork.
