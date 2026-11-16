@@ -1,12 +1,15 @@
 # Hoodie Analytics
 
-Connects Claude to the Hoodie Analytics MCP server, so you can ask about cannabis retail and wholesale market data in plain language. It also adds three skills that turn that data, or your own point-of-sale (POS) exports, into reports you can share.
+Connects Claude to the Hoodie Analytics MCP server, so you can ask about cannabis retail and wholesale market data in plain language. It also adds skills that turn that data, or your own point-of-sale (POS) exports, into reports you can share.
 
-You need a Hoodie Analytics account. The data you can query depends on your subscription: for example, the market intelligence tools need the Market Intelligence Member role.
+You need a Hoodie Analytics account. The data you can query depends on your account access: for example, you need access to the Market Intelligence module in order to use the market intelligence MCP tools.
 
 ## What it adds
 
 - **hoodie-analytics connector**: the Hoodie MCP server at `https://mcp.hoodieanalytics.com/mcp`. Its tools cover your account, market intelligence (modelled monthly retail sales and ACV), POS data for stores your account owns or that share data with your brands, current dispensary menus, and your own wholesale records.
+
+### Skills
+
 - **acv-decomposition-dashboard**: a two-month ACV decomposition dashboard for one or more brands in a state: won and lost stores, a dollar bridge, whitespace, a county map and market movers.
 - **shelf-check**: a shelf health report for a dispensary from a POS export plus Hoodie market data: keep, fix or cut verdicts per product line, replacements and a 30-day plan.
 - **weekly-brand-reorder**: a weekly reorder grouped by brand from a POS or inventory export: purchase orders per brand and store, a report page and a vendor CSV.
